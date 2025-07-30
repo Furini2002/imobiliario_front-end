@@ -1,0 +1,99 @@
+.featured {
+    padding: 40px 60px 40px 0;
+    background-color: white;
+  }
+  
+  .header {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin-left: 250px;
+    position: relative;
+    top: -70px;
+  }
+
+  .featured img {
+    position: relative;
+    top: -130px;
+  }
+  
+  .header h2 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+  
+  .header p, .header strong {
+    font-size: 16px;
+    max-width: 300px;
+    line-height: 2;
+  }
+
+  .header strong{
+    font-weight: bold;
+  }
+
+  .header h2 strong {
+    line-height: 1;
+    font-size: 50px;
+    font-weight: 900;  
+    max-width: 300px;  
+  }
+  
+  .cards {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+  } 
+
+  @media (max-width: 1024px) {
+    .featured img {
+      height: 350px;
+    }  
+
+    .header{
+      top: 0;
+      line-height: 1;
+      margin: -100px 20px 20px 50px;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .header h2 strong{
+      font-size: 50px;
+      line-height: 1;
+    }
+
+    .header p{
+      max-width: 500px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .featured img {
+      display: none;
+    }
+
+    .featured {
+      padding: 40px 0 40px 0;
+    }
+
+    .header{
+      margin-left: 20px;
+      top: 0;
+      line-height: 1;
+      margin: 0 0 20px 20px;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .header h2 strong{
+      font-size: 40px;
+      line-height: 1;
+    }
+
+    .header p{
+      width: auto;
+    }
+  }

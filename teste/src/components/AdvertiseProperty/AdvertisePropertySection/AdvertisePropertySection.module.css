@@ -1,0 +1,248 @@
+.section {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 36px 0 32px 0;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
+  .left {
+    flex: 1.3;
+    max-width: 690px;
+    margin-right: 24px;
+  }
+  
+  .bold {
+    font-weight: 700;
+    font-size: 30px;
+  }
+  
+  h2 {
+    font-size: 30px;
+    margin-bottom: 6px;
+  }
+  
+  .subtitle {
+    font-weight: 500;
+    font-size: 16px;
+    margin: 16px 0 5px 0;
+  }
+  
+  .desc {
+    color: #606060;
+    font-size: 16px;
+    margin-bottom: 18px;
+    line-height: 1.8;
+    text-align: justify;
+  }
+  
+  .benefitsTitle {
+    margin: 26px 0 13px 0;
+    font-weight: 600;
+    font-size: 1.08rem;
+  }
+  
+  .benefitsGrid {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .benefitCard {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px #0001;
+    padding: 17px 15px;
+    width: 200px;
+    font-size: 0.97rem;
+    color: #444;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .benefitIcon {
+    font-size: 2.1rem;
+    color: #0D4DA0;
+    margin-bottom: 8px;
+  }
+
+  .stepsTitle {
+    font-weight: 600;
+    font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .stepsList {
+    list-style: decimal;
+    color: #ececec;
+    font-size: 30px;
+    counter-reset: li;
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+  
+  .stepsList li {
+    color: #ececec;
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 50px;
+    min-height: 40px;
+    font-size: 20px;
+  }
+  .stepsList li::before {
+    content: counter(li, decimal);
+    counter-increment: li;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #a9a9a9;
+    font-size: 50px;
+    font-weight: 700;
+    opacity: 0.85;
+    z-index: 0;
+  }
+  
+  .stepsList li span, .stepsList li {
+    font-size: 1.07rem;
+    color: black;
+    font-weight: 400;
+    z-index: 1;
+    position: relative;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+  
+  .form {
+    flex: 1;
+    background: #fff;
+    border-radius: 13px;
+    box-shadow: 0 3px 12px #0002;
+    padding: 22px 17px 18px 17px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .formTitle {
+    font-weight: bold;
+    font-size: 1.02rem;
+    margin-bottom: 8px;
+    line-height: 1;
+  }
+  
+  .formSectionTitle {
+    font-size: 0.98rem;
+    font-weight: 500;
+    margin-top: 14px;
+    color: #666;
+    display: block;
+  }
+  
+  input,
+  textarea {
+    background: #ededed;
+    border: none;
+    border-radius: 7px;
+    padding: 10px 13px;
+    font-size: 1rem;
+    margin-bottom: 3px;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  .submitButton {
+    background: #0D4DA0;
+    color: #fff;
+    font-size: 1.07rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 11px;
+    padding: 11px 0;
+    margin-top: 13px;
+    cursor: pointer;
+    transition: background 0.18s;
+  }
+  
+  .submitButton:hover {
+    background: #195ac2;
+  }
+  
+  .support {
+    font-size: 0.98rem;
+    margin-top: 11px;
+    color: #333;
+    display: block;
+    align-items: center;
+    gap: 8px;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .whatsapp {
+    color: #25d366;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 6px;
+  }
+  .whatsIcon {
+    font-size: 1.3em;
+    margin-right: 3px;
+  }
+  
+  @media (max-width: 768px) {
+    .section {
+      flex-direction: column;
+      padding: 16px 0;
+      gap: 20px;
+      align-items: stretch;
+      margin: 20px;
+      align-items: center;
+    }
+    .left {
+      margin-right: 0;
+      margin-bottom: 14px;
+    }
+    .form {
+      min-width: 200px;
+      margin: 0 20px;
+    }
+    .benefitsGrid {
+      justify-content: center;
+      gap: 40px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .section {   
+      margin: 20px;
+    }
+    .left {
+      margin-right: 0;
+      margin-bottom: 14px;
+    }
+    .form {
+      min-width: 200px;
+      margin: 0 20px;
+    }
+    .benefitsGrid {
+      justify-content: center;
+      gap: 40px;
+    }
+  }
+  

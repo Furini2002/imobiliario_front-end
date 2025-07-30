@@ -1,0 +1,208 @@
+.howItWorksSection {
+    background: #f8f8f8;
+    padding: 38px 0 58px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .processBlock {
+    display: flex;
+    width: 95%;
+    max-width: 1080px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    gap: 60px;
+  }
+  
+  .processSteps {
+    flex: 1;
+    min-width: 290px;
+  }
+  
+  .processSteps h2 {
+    font-size: 30px;
+    margin-bottom: 4px;
+    font-weight: 700;
+  }
+  
+  .subtitle {
+    color: #7b7b7b;
+    font-size: 20px;
+    margin-bottom: 64px;
+    display: block;
+  }
+  
+  .processSteps ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .processSteps li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 22px;
+  }
+  
+  .stepNumber {
+    font-size: 70px;
+    font-weight: 500;
+    color: #222;
+    margin-right: 80px;
+    margin-top: 10px;
+    min-width: 48px;
+    text-align: right;
+  }
+  
+  .stepTitle {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .stepDesc{
+    color: #8b8b8b;
+    font-size: 18px;
+    line-height: 1;
+    text-align: justify;
+  }
+  
+  .processImgBlock {
+    flex: 1;
+    display: flex;
+    width: 520px;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .processImg {
+    height: 100%;
+  }
+  
+  /* --- FORMUALRIO --- */
+  .simulationForm {
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 3px 14px #0001;
+    padding: 28px 22px 22px 22px;
+    max-width: 640px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .formTitle {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .formSectionTitle {
+    font-size: 0.98rem;
+    font-weight: 500;
+    margin-top: 14px;
+    margin-bottom: 1px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    display: block;
+  }
+  
+  .inputHint {
+    color: #aaa;
+    font-size: 0.95em;
+    font-weight: 400;
+    margin-left: 7px;
+    display: block;
+    line-height: 1;
+  }
+  
+  .simulationForm input {
+    background: #ededed;
+    border: none;
+    border-radius: 7px;
+    padding: 10px 13px;
+    font-size: 1rem;
+    margin-bottom: 3px;
+  }
+  
+  .simulationForm input[type="date"] {
+    color: #555;
+  }
+  
+  .submitButton {
+    background: #195ac2;
+    color: #fff;
+    font-size: 1.04rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 12px;
+    padding: 13px 0;
+    margin-top: 13px;
+    cursor: pointer;
+    transition: background 0.18s;
+  }
+  
+  .submitButton:hover {
+    background: #183f8f;
+  }
+  
+  /* --- RESPONSIVO --- */
+  @media (max-width: 1024px) {
+    .processBlock {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 26px;
+    }
+    .processImgBlock {
+      justify-content: center;
+      margin: auto;
+    }
+    .processImg {
+      width: 80vw;
+      max-width: 360px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .processBlock {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 26px;
+    }
+    .howItWorksSection {
+      padding: 10px 0 24px 0;
+    }
+    .simulationForm {
+      padding: 16px 4vw 8px 4vw;
+      max-width: 98vw;
+    }
+    .processSteps h2 {
+      font-size: 25px;
+      margin-top: 20px;
+    }
+    .stepNumber {
+      font-size: 40px;
+      min-width: 35px;
+      margin-right: 40px;
+    }   
+    .stepDesc, .stepTitle{
+      font-size: 16px;
+    } 
+    .processImgBlock {
+      width: 100%;
+    }
+    .processImg {
+      width: 80vw;
+      max-width: 360px;
+    }
+    .formTitle{
+      font-size: 25px;
+      text-align: center;
+    }
+
+  }
+  

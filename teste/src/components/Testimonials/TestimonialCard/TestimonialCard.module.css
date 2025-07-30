@@ -1,0 +1,46 @@
+.card {
+  position: relative;
+  max-width: 100%;
+  width: 800px;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  color: white;
+  padding: 10px;
+}
+
+.quote {
+  font-size: 14px;
+  font-style: italic;
+  margin: 0 0 4px;
+  line-height: 1;
+}
+
+.name {
+  font-size: 12px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .card {
+    max-width: 100%;
+    width: 400px;
+    height: auto;
+  }
+}

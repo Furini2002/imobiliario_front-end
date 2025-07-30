@@ -1,0 +1,56 @@
+.featured {
+    padding: 40px 60px 40px 0;
+    background-color: white;
+  }
+  
+  .header {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin-left: 250px;
+    position: relative;
+  }
+
+  .featured img {
+    position: relative;
+    top: -130px;
+  }  
+
+
+  .header h2  {
+    font-weight: 600;  
+    color: #0D4DA0;
+  }
+  
+  .cards {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+  } 
+
+  @media (max-width: 1024px) {
+    .header{
+      top: 0;
+      line-height: 1;
+      margin: 0 20px 20px 50px;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .featured {
+      padding: 40px 0 40px 0;
+    }
+
+    .header{
+      margin-left: 20px;
+      top: 0;
+      line-height: 1;
+      margin: 0 0 20px 20px;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }

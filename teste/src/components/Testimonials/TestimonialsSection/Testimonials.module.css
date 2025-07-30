@@ -1,0 +1,33 @@
+.testimonials {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f5f5f5;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonials h2 {
+  font-size: 50px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  line-height: 1;
+  max-width: 1300px;
+}
+  
+.list {
+  width: auto;          
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .testimonials h2 {
+    font-size: 30px;
+  }
+
+}
+
+  
+  

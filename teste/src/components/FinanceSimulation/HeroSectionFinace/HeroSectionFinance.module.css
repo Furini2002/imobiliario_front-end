@@ -1,0 +1,78 @@
+.simulationSection {
+    width: 100%;
+    min-height: 340px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+  
+  .overlay {
+    width: 100%;
+    min-height: 560px;
+    background: rgba(34, 34, 34, 0.22);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 540px;
+    margin-left: 8vw;
+  }
+  
+  .title {
+    color: #222;
+    font-size: 2.7rem;
+    font-weight: 500;
+    margin-bottom: 50px;
+    line-height: 1.05;
+    text-shadow: 0 2px 12px #fff9;
+  }
+  
+  .button {
+    background: #0D4DA0;
+    color: #fff;
+    padding: 13px 38px;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 2px 12px #0002;
+    transition: background 0.22s;
+  }
+  
+  .button:hover {
+    background: #155a99;
+  }
+  
+  @media (max-width: 768px) {
+    .simulationSection, .overlay {
+      min-height: 300px;
+      text-align: left;
+    }
+
+    .content {
+      margin-left: 20px;
+      text-align: start;
+    }
+
+    .title {
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+      text-shadow: 0 1px 8px #fff8;
+    }
+
+    .button {
+      font-size: 1.07rem;
+      padding: 11px 22px;
+    }
+  }
+  

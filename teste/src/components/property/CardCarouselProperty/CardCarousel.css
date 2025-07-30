@@ -1,0 +1,21 @@
+.slick-prev, .slick-next {
+    display: block !important;
+    z-index: 1;
+    color: rgb(234, 233, 233) !important;
+}
+
+.slider-container .slick-list {
+    padding-left: 250px;
+}
+
+ .slider-container .slick-prev:before,
+ .slider-container .slick-next:before {
+  color: rgb(196, 196, 196) !important;   
+  opacity: 1;                 
+}
+
+@media (max-width: 768px){
+    .slider-container .slick-list {
+        padding-left: 20px;
+    }
+}

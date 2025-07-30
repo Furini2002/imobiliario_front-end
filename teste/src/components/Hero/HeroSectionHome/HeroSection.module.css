@@ -1,0 +1,112 @@
+.hero {
+    background-image: url('../../../assets/hero.png'); 
+    background-size: cover;
+    background-position: center;
+    padding: 245px 150px 0px 150px;
+    color: white;
+    text-align: center;
+    position: relative;
+    height: 705px;
+  }
+  
+  .overlay {
+    padding: 40px;
+    height: auto;
+
+    background: rgba(13, 77, 160, 0.8);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+  }
+  
+  .title {
+    font-size: 50px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  }
+  
+  .searchForm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;    
+  }
+  
+  .searchForm select{
+    padding: 13px;
+    min-width: 18rem;
+    border-radius: 15px;
+    color: #6F6E6E;
+  }
+  
+  .searchForm button {
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 0px;
+    line-height: 1;
+    height: 47px;
+    width: 12rem;
+    border-radius: 15px;
+    align-self: flex-end;
+  }
+  
+@media (max-width: 1024px) {
+  .hero {
+    padding: 200px 50px 100px 50px;
+    height: auto;
+  }
+
+  .title {
+    font-size: 35px;
+  }
+
+  .overlay {
+    padding: 30px;
+    height: auto;
+  }
+
+  .searchForm {
+    gap: 15px;
+  }
+
+  .searchForm select {
+    min-width: 16rem;
+  }
+
+  .searchForm button {
+    width: 11rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 150px 20px 40px 20px;
+    height: auto;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .overlay {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .searchForm {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .searchForm select {
+    min-width: 100%;
+  }
+
+  .searchForm button {
+    width: 100%;
+  }
+}

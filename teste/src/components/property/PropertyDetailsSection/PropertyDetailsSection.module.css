@@ -1,0 +1,240 @@
+.root {
+  margin: 0 auto 0 auto;
+  padding: 0;
+  max-width: 1300px;
+}
+
+.headerInfo {
+  display: flex;
+  justify-content: space-between;
+  gap: 22px;
+  background: #f5f5f5;
+  padding: 18px 24px 10px 24px;
+  width: 65%;
+}
+
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 90px;
+  font-size: 1.1rem;
+  color: #212529;
+  font-weight: 500;
+}
+
+.infoBox svg {
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+  color: #3361b5;
+}
+.infoBox span {
+  text-align: center;
+  font-size: 0.97rem;
+}
+
+.detailsGrid {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  padding: 30px 24px 18px 24px;
+}
+
+.left {
+  flex: 2;
+  min-width: 0;
+}
+.right {
+  flex: 1.1;
+  width: 35%;
+  background: #1b4f9b;
+  color: #fff;
+  border-radius: 0 0 10px 10px;
+  padding: 30px 22px 28px 22px;
+  box-shadow: 0 4px 16px #00152715;
+  margin-top: -170px;
+  margin-right: -24px;
+  z-index: 2;
+  position: relative;
+}
+.title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  color: #232629;
+}
+.subtitle {
+  font-size: 1.18rem;
+  font-weight: 600;
+  color: #1957a7;
+  margin: 24px 0 8px 0;
+}
+.desc {
+  color: #555;
+  font-size: 1.04rem;
+  margin-bottom: 16px;
+}
+.characteristicsTitle {
+  margin: 22px 0 10px 0;
+  font-size: 1.08rem;
+  color: #212529;
+  font-weight: 600;
+}
+.characteristicsList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px 22px;
+  margin: 0 0 24px 0;
+  padding: 0 0 0 12px;
+}
+.characteristicsList li {
+  list-style: none;
+  color: #313133;
+  font-size: 1.03rem;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+.icon {
+  color: #1957a7;
+  margin-right: 7px;
+}
+
+.mapSection {
+  margin-top: 28px;
+}
+.mapTitle {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #232629;
+}
+.mapImg {
+  width: 100%;
+  max-width: 450px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px #0001;
+}
+.mapAddress {
+  font-size: 0.98rem;
+  margin-top: 8px;
+  color: #3e4150;
+}
+
+/* Card à direita (formulário de interesse) */
+.priceLabel {
+  font-size: 1.02rem;
+  color: #e7eaf2;
+  margin-bottom: 7px;
+}
+.price {
+  display: block;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 4px 0 0 0;
+}
+.contactTitle {
+  font-size: 1.17rem;
+  margin: 20px 0 15px 0;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.input {
+  border-radius: 7px;
+  border: none;
+  padding: 10px 10px;
+  font-size: 1.05rem;
+  margin-bottom: 0;
+  color: #222;
+}
+.whatsBtn {
+  background: #26d367;
+  color: #fff;
+  font-size: 1.09rem;
+  font-weight: 600;
+  border-radius: 7px;
+  border: none;
+  padding: 10px 0;
+  margin-bottom: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+  text-decoration: none;
+}
+.whatsBtn:hover {
+  background: #13ba54;
+}
+.financiamentoBtn {
+  background: #3965a6;
+  color: #e3f0ff;
+  font-size: 1.01rem;
+  border-radius: 7px;
+  border: none;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: background 0.14s;
+  margin-top: 2px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.financiamentoBtn:hover {
+  background: #264e85;
+}
+
+@media (max-width: 1024px) {
+  .detailsGrid {
+    flex-direction: column;
+    gap: 20px;
+    padding: 18px 8px 12px 8px;
+  }
+  .right {
+    margin-top: 18px;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  .headerInfo {
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 12px 8px 6px 8px;
+    width: 100%;
+  }
+  .left {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .root {
+    padding: 0;
+  }
+
+  .detailsGrid {
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px 0 20px 0;
+  }
+
+  .left {
+    padding: 10px;
+  }
+  .right {
+    border-radius: 0 0 7px 7px;
+  }
+  .headerInfo {
+    padding: 8px 4px;
+    gap: 8px;
+  }
+  .mapImg {
+    height: 80px;
+  }
+}

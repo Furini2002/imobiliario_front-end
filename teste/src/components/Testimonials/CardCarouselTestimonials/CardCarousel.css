@@ -1,0 +1,23 @@
+#testimonial-carousel .slider-container {
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: visible;    
+    position: relative;
+}
+
+#testimonial-carousel .slick-slide > div {
+    display: flex !important;
+    justify-content: center;
+    }
+
+#testimonial-carousel .slick-list,
+#testimonial-carousel .slick-track {
+    display: flex;
+}
+
+#testimonial-carousel .slider-container .slick-prev:before,
+#testimonial-carousel .slider-container .slick-next:before {
+  color: rgb(196, 196, 196) !important;   
+  opacity: 1;                 
+}
+  
