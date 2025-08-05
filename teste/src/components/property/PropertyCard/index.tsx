@@ -6,7 +6,7 @@ type PropertyCardProps = {
   image: string;
   title: string;
   dorms: number;
-  vagas: number;
+  bathrooms: number;
   area: number;
   city: string;
   price: string;
@@ -16,7 +16,7 @@ export default function PropertyCard({
   image,
   title,
   dorms,
-  vagas,
+  bathrooms,
   area,
   city,
   price,
@@ -31,11 +31,11 @@ export default function PropertyCard({
         <div className={styles.cardInfo}>
           <h3>{title}</h3>
           <p>
-            {dorms} dorm. | {vagas} vagas | {area} m²
+            {dorms} dorm. | {area} m²
           </p>
           <p><FaMapMarkerAlt size={13} /> {city}</p>
           <div className={styles.footer}>
-            <p className={styles.price}><FaSquareFull size={12} color="#0D4DA0"/> {price}</p>
+            <p className={styles.price}><FaSquareFull size={12} color="#0D4DA0"/> R$ {price}</p>
             <Button className={styles.button}>Detalhes</Button>
           </div>
           

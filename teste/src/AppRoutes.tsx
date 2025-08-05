@@ -16,7 +16,7 @@ function AppRoutes() {
         <Route path="/sobre" element={<AboutUs />} />
         <Route path="/simular" element={<FinanceSimulation />} />
         <Route path="/anunciar" element={<AdvertiseProperty />} />
-        <Route path="/busca" element={<PropertiesPage />} />
+        <Route path="/buscar" element={<PropertiesPage />} />
         <Route path="/details" element={<PropertieDetails />} />
         <Route path="*" element={<NotFoundPage/>} />
       </Route>
