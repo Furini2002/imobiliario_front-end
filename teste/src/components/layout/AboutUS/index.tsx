@@ -14,7 +14,7 @@ export default function AboutUs() {
       <HighlightFormSection
         title="Veja nossos imóveis disponíveis para a sua região"
         buttonLabel="Confira nossos imóveis disponíveis"
-        buttonLink="/busca"
+        buttonLink="/buscar"
       />
     </>
   );

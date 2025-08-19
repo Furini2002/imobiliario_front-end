@@ -17,11 +17,10 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    function onScroll() {
-      setScrolled(window.scrollY > 10);
-    }
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    handleScroll(); // aplica estado inicial ao carregar a página
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -46,14 +45,20 @@ export default function Header() {
           <a href={links.simular}>Simule seu Financiamento</a>
 
           <div className={styles.actionsMobile}>
-            <a href={getWhatsLink("Olá, gostaria de falar com um consultor")} className={styles.whatsapp}>
+            <a
+              href={getWhatsLink("Olá, gostaria de falar com um consultor")}
+              className={styles.whatsapp}
+            >
               <FaWhatsapp size={20} /> Fale conosco
             </a>
           </div>
         </nav>
 
         <div className={styles.actions}>
-          <a href={getWhatsLink("Olá, gostaria de falar com um consultor")} className={styles.whatsapp}>
+          <a
+            href={getWhatsLink("Olá, gostaria de falar com um consultor")}
+            className={styles.whatsapp}
+          >
             <FaWhatsapp size={20} /> Fale conosco
           </a>
           <a href={links.facebook} className={styles.social}>

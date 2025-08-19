@@ -11,10 +11,11 @@
   z-index: 100;
 }
 
+.scrolled {}
+
 .header.scrolled {
-  background-color: rgba(13, 77, 160, 0.9); 
+  background-color: rgba(13, 77, 160, 0.5); 
   backdrop-filter: blur(20px);
-  opacity: 0.9;
 }
 
 .container {

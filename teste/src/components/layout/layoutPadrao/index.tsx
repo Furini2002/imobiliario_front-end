@@ -2,6 +2,7 @@ import Header from "../../Header";
 import Footer from "../../Footer";
 import { Outlet } from "react-router-dom";
 import { LinksContext } from "../../Utils/LinksContext";
+import "./LayoutPadrao.css";
 
 export default function LayoutPadrao() {
   const links = {
@@ -15,11 +16,13 @@ export default function LayoutPadrao() {
 
   return (
     <LinksContext.Provider value={links}>
-      <Header />
-      <main style={{ marginTop: "75px" }}>
-        <Outlet />
-      </main>
-      <Footer />
+      <div className="app-container">
+        <Header />
+        <main className="main-content" style={{ marginTop: "75px" }}>
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
     </LinksContext.Provider>
   );
 }

@@ -1,67 +1,171 @@
 .grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-  .pagination {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin: 20px 0 0 0;
+.emptyStateGrid{
+  grid-column: 1 / -1;      
+  grid-row: 1 / -1;         
+  min-height:60vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.pagination {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0 0 0;
+}
+
+.pagination button,
+.pagination span {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  border: none;
+  background: #e1e1e1;
+  color: #222;
+  cursor: pointer;
+  transition: background 0.15s;
+  margin-bottom: 15px;
+}
+
+.pagination button:hover:not(.active) {
+  background: #d1d1d1;
+}
+
+.pagination .active,
+.pagination button.active {
+  background: #636363;
+  color: #fff;
+  cursor: default;
+  pointer-events: none;
+}
+
+.pagination .ellipsis,
+.pagination span.ellipsis {
+  background: #e1e1e1;
+  color: #222;
+  cursor: default;
+  pointer-events: none;
+}
+
+@media (max-width: 1100px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  .pagination button,
-  .pagination span {
-    width: 40px;
-    height: 40px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.4rem;
-    border: none;
-    background: #e1e1e1;
-    color: #222;
-    cursor: pointer;
-    transition: background 0.15s;
-    margin-bottom: 15px;
+}
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  .pagination button:hover:not(.active) {
-    background: #d1d1d1;
+}
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
   }
-  
-  .pagination .active,
-  .pagination button.active {
-    background: #636363;
-    color: #fff;
-    cursor: default;
-    pointer-events: none;
+}
+
+:root {
+  --brand: #0D4DA0;          /* azul principal */
+  --skel-base: #B3C7E6;      /* azul pastel */
+  --skel-shine: #E3ECF8;     /* tom ainda mais claro */
+}
+
+
+
+
+/*loading skeleton*/
+.skelCard {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(13, 77, 160, 0.08);
+  border: 1px solid rgba(13, 77, 160, 0.06);
+  min-width: 280px;
+  isolation: isolate;
+}
+
+.skelImage {
+  height: 180px;
+  background:
+    linear-gradient(90deg, var(--skel-base) 20%, var(--skel-shine) 40%, var(--skel-base) 60%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite linear;
+}
+
+.skelLines {
+  padding: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.skelLine, .skelLineWide, .skelPrice, .skelButton, .skelPill {
+  background:
+    linear-gradient(90deg, var(--skel-base) 20%, var(--skel-shine) 40%, var(--skel-base) 60%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite linear;
+  border-radius: 10px;
+}
+
+.skelLine { height: 10px; width: 70%; }
+.skelLineWide { height: 14px; width: 90%; border-radius: 12px; }
+
+.skelMetaRow {
+  display: flex;
+  gap: 8px;
+}
+
+.skelPill {
+  height: 22px;
+  width: 28%;
+  border-radius: 999px;
+}
+
+.skelPrice {
+  height: 20px;
+  width: 60%;
+}
+
+.skelButton {
+  height: 36px;
+  width: 100%;
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 2px rgba(13, 77, 160, 0.08);
+}
+
+/* grid já existe; o skeleton usa o mesmo layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+/* shimmer */
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* respeita usuários que preferem menos animação */
+@media (prefers-reduced-motion: reduce) {
+  .skelImage,
+  .skelLine,
+  .skelLineWide,
+  .skelPrice,
+  .skelButton,
+  .skelPill {
+    animation: none;
   }
-  
-  .pagination .ellipsis,
-  .pagination span.ellipsis {
-    background: #e1e1e1;
-    color: #222;
-    cursor: default;
-    pointer-events: none;
-  }
-  
-  @media (max-width: 1100px) {
-    .grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  @media (max-width: 900px) {
-    .grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  @media (max-width: 600px) {
-    .grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  
+}

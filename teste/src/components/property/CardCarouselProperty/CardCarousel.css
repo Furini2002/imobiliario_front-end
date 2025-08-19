@@ -1,21 +1,94 @@
-.slick-prev, .slick-next {
-    display: block !important;
-    z-index: 1;
-    color: rgb(234, 233, 233) !important;
+.slick-prev,
+.slick-next {
+  display: block !important;
+  z-index: 1;
+  color: rgb(234, 233, 233) !important;
 }
 
 .slider-container .slick-list {
-    padding-left: 250px;
+  padding-left: 250px;
 }
 
- .slider-container .slick-prev:before,
- .slider-container .slick-next:before {
-  color: rgb(196, 196, 196) !important;   
-  opacity: 1;                 
+.slider-container .slick-prev:before,
+.slider-container .slick-next:before {
+  color: rgb(196, 196, 196) !important;
+  opacity: 1;
 }
 
-@media (max-width: 768px){
-    .slider-container .slick-list {
-        padding-left: 20px;
-    }
+@media (max-width: 768px) {
+  .slider-container .slick-list {
+    padding-left: 20px;
+  }
+}
+
+.slick-prev,
+.slick-next {
+  width: 44px;
+  height: 44px;
+  z-index: 2;
+}
+.slick-prev:before,
+.slick-next:before {
+  font-size: 28px;
+  line-height: 1;
+  opacity: 0.85;
+}
+
+.slick-dots li button:before {
+  font-size: 10px;
+  opacity: 0.45;
+}
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+}
+
+.carousel-cta-card {
+  min-width: 250px;
+  height: 400px;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+
+.carousel-cta-card__content {
+  height: 100%;
+  border-radius: 12px;
+  padding: 24px 20px;
+  background: linear-gradient(
+    135deg,
+    #f1f5f9,
+    #ffffff
+  ); 
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.carousel-cta-card__title {
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.carousel-cta-card__text {
+  margin: 0 0 16px;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.carousel-cta-card__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: #0d4da0;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.carousel-cta-card__button:hover {
+  background: #0a3d7e;
 }

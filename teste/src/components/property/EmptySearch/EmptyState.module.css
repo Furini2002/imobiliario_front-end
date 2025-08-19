@@ -1,0 +1,40 @@
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh; 
+  width: 100%;
+  text-align: center;
+}
+
+.emptyImage {
+  width: 150px;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.emptyState h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.emptyState p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.ctaButton {
+  background-color: #0D4DA0;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.ctaButton:hover {
+  background-color: #005fd1;
+}

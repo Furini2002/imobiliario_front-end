@@ -1,159 +1,205 @@
 .galleryContainer {
-    display: flex;
-    width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
+  display: flex;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.mainPhoto {
+  flex: 1.2;
+  aspect-ratio: 1.1/1;
+  overflow: hidden;
+  margin-right: 2px;
+}
+
+.mainPhoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sideGrid {
+  flex: 1.2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2px;
+}
+
+.sidePhoto {
+  position: relative;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+
+.sidePhoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlayBtn {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(36, 36, 36, 0.55);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 14px 14px;
+  transition: background 0.18s;
+}
+.overlayBtn:hover {
+  background: rgba(36, 36, 36, 0.72);
+}
+
+/* Modal */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modalContent {
+  background: #111;
+  border-radius: 8px;
+  max-width: 900px;
+  width: 95vw;
+  max-height: 85vh;
+  padding: 18px;
+  box-shadow: 0 2px 24px #000b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.modalMainImage {
+  width: 100%;
+  max-height: 60vh;
+  object-fit: contain;
+  margin-bottom: 16px;
+  background: #222;
+}
+.modalThumbs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  margin-bottom: 12px;
+  width: 100%;
+  justify-content: center;
+}
+.modalThumb {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0.6;
+  border: 2px solid transparent;
+  transition: border 0.14s, opacity 0.14s;
+}
+.modalThumb.selected {
+  opacity: 1;
+  border: 2px solid #fff;
+}
+.closeBtn {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0;
+  z-index: 2;
+}
+@media (max-width: 900px) {
+  .galleryContainer {
+    flex-direction: column;
+    gap: 2px;
+    max-width: 100%;
   }
-  
   .mainPhoto {
-    flex: 1.2;
-    aspect-ratio: 1.1/1;
-    overflow: hidden;
-    margin-right: 2px;
+    aspect-ratio: 2/1.1;
   }
-  
-  .mainPhoto img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
   .sideGrid {
-    flex: 1.2;
-    display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
     gap: 2px;
   }
-  
-  .sidePhoto {
-    position: relative;
-    aspect-ratio: 1/1;
-    overflow: hidden;
+}
+@media (max-width: 600px) {
+  .galleryContainer {
+    flex-direction: column;
   }
-  
-  .sidePhoto img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .mainPhoto {
+    aspect-ratio: 1.7/1;
   }
-  
-  .overlayBtn {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(36,36,36,0.55);
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: 500;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    padding: 14px 14px;
-    transition: background 0.18s;
-  }
-  .overlayBtn:hover {
-    background: rgba(36,36,36,0.72);
-  }
-  
-  /* Modal */
-  .modalOverlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.65);
-    z-index: 99;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .sideGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
   }
   .modalContent {
-    background: #111;
-    border-radius: 8px;
-    max-width: 900px;
-    width: 95vw;
-    max-height: 85vh;
-    padding: 18px;
-    box-shadow: 0 2px 24px #000b;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-  }
-  .modalMainImage {
-    width: 100%;
-    max-height: 60vh;
-    object-fit: contain;
-    margin-bottom: 16px;
-    background: #222;
-  }
-  .modalThumbs {
-    display: flex;
-    gap: 8px;
-    overflow-x: auto;
-    margin-bottom: 12px;
-    width: 100%;
-    justify-content: center;
+    padding: 8px;
   }
   .modalThumb {
-    width: 80px;
-    height: 60px;
-    object-fit: cover;
-    cursor: pointer;
-    opacity: 0.6;
-    border: 2px solid transparent;
-    transition: border 0.14s, opacity 0.14s;
+    width: 54px;
+    height: 40px;
   }
-  .modalThumb.selected {
-    opacity: 1;
-    border: 2px solid #fff;
+}
+
+/*loading skelton*/
+:root {
+  --skel-base: #b3c7e6; /* azul pastel suave */
+  --skel-shine: #e3ecf8; /* ainda mais claro */
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
   }
-  .closeBtn {
-    position: absolute;
-    top: 12px;
-    right: 18px;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 2rem;
-    cursor: pointer;
-    padding: 0;
-    z-index: 2;
+  100% {
+    background-position: -200% 0;
   }
-  @media (max-width: 900px) {
-    .galleryContainer {
-      flex-direction: column;
-      gap: 2px;
-      max-width: 100%;
-    }
-    .mainPhoto {
-      aspect-ratio: 2/1.1;
-    }
-    .sideGrid {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr;
-      gap: 2px;
-    }
-  }
-  @media (max-width: 600px) {
-    .galleryContainer {
-      flex-direction: column;
-    }
-    .mainPhoto {
-      aspect-ratio: 1.7/1;
-    }
-    .sideGrid {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr;
-    }
-    .modalContent {
-      padding: 8px;
-    }
-    .modalThumb {
-      width: 54px;
-      height: 40px;
-    }
-  }
-  
+}
+
+.skelMain,
+.skelSide {
+  background: linear-gradient(
+    90deg,
+    var(--skel-base) 20%,
+    var(--skel-shine) 40%,
+    var(--skel-base) 60%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite linear;
+  border-radius: 14px;
+}
+
+.mainPhoto .skelMain {
+  width: 100%;
+  height: 420px; 
+}
+
+.sidePhoto .skelSide {
+  width: 100%;
+  height: 200px; 
+}
+
+.mainPhoto img,
+.sidePhoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 14px;
+}

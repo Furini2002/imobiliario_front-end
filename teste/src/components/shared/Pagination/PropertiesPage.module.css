@@ -1,0 +1,76 @@
+:root {
+  --brand: #5a7bbe;
+  --text: #1d2433;
+  --muted: #8a94a6;
+  --ring: rgba(90, 123, 190, 0.35);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pg {
+  list-style: none;
+  display: flex;
+  gap: 6px;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.pgBtn {
+  appearance: none;
+  border: 1px solid transparent;
+  background: #fff;
+  color: var(--text);
+  min-width: 40px;
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  box-shadow: 0 6px 16px rgba(90, 123, 190, 0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+    border-color 0.15s ease, background 0.15s ease;
+}
+
+.pgBtn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(90, 123, 190, 0.12);
+  border-color: var(--ring);
+}
+
+.pgBtn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px var(--ring);
+}
+
+.pgBtn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.pgActive {
+  background: linear-gradient(180deg, #fff, #f7f9ff);
+  border-color: var(--ring);
+  color: var(--brand);
+}
+
+.pgEllipsis {
+  color: var(--muted);
+  padding: 0 6px;
+  user-select: none;
+}
+
+/* responsivo */
+@media (max-width: 560px) {
+  .pgBtn {
+    min-width: 36px;
+    height: 36px;
+    padding: 0 10px;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+}
